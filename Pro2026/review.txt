@@ -1,0 +1,27 @@
+Basic ------------------------------------------
+- Q7
+- Q11
+- Q12
+
+* 최대공약수
+public static int gcd(int a, int b) {
+	while(b != 0) {
+		int temp = a % b;
+		a = b;
+		b = temp;			
+	}
+	return a;
+}
+
+* 최소공배수
+lcm = a * b / gcd(a, b)
+
+
+* 홀수 개수 구하는 공식
+int size = (n + 1) / 2;
+
+* 짝수 개수 구하는 공식
+int size = n / 2;
+
+* k개씩 나눌 때 필요한 묶음 수
+int bundle = (n + k - 1) / k;

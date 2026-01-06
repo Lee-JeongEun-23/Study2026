@@ -1,17 +1,27 @@
 package main;
 
-import java.util.*;
-
 public class TEST {
 
 	public static void main(String[] args) {
-		int[] numbers = {1, 2, 100, -99, 1, 2, 3};
-		int[] answer = new int[numbers.length];
-		
-		for(int i = 0; i < numbers.length; i++) {
-			answer[i] = numbers[i]*2;
-		}
-		
-		System.out.println(Arrays.toString(answer));
+		int n = 4;
+		int gcd = gcd(n,6);		
+		int answer = n / gcd;
+		System.out.println(answer);
 	}
+	
+	 public static int gcd(int a, int b) {
+		while(b != 0) {
+			int temp = a % b;
+			a = b;
+			b = temp;			
+		}
+		return a;
+	}
+	
+	
+	
 }
+/*
+10	5
+ * 
+ */
