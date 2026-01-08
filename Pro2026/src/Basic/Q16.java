@@ -24,4 +24,13 @@ public class Q16 {
 		double answer = temp / numbers.length;
         return answer;
     }
+	
+	// 챗지피티 추천 풀이
+	/*
+		double sum = 0;
+	    for (int n : numbers) {
+	        sum += n;
+	    }
+	    return sum / numbers.length;
+    */
 }
