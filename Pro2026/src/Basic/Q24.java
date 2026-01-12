@@ -12,7 +12,6 @@ package Basic;
 	2 ≤ my_string 길이 ≤ 5
 	2 ≤ n ≤ 10
 	"my_string"은 영어 대소문자로 이루어져 있습니다.
-
 */
 
 public class Q24 {

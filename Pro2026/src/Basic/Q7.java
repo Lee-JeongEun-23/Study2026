@@ -39,53 +39,51 @@ public class Q7 {
 	
 	// 기존 풀이 > 비추천 코드
 	/*
-		public int[] solution(int numer1, int denom1, int numer2, int denom2) {
-	        int[] arr = new int[2];
-	        if(denom1 % numer1 == 0) {
-				denom1 = denom1 / numer1;
-				numer1 = 1;
-			}
-			if(denom2 % numer2 == 0) {
-				denom2 = denom2 / numer2;
-				numer2 = 1;
-			}
-	        if(denom1 < denom2) {
-				if(denom2 % denom1 == 0) {
-					arr[1] = denom2;
-					arr[0] = (denom2 / denom1) * numer1 + numer2;
-				}else {
-					arr[1] = (denom1 * denom2 / gcd(denom1, denom2));
-					int a = 0, b = 0;
-					a = (arr[1] / denom1) * numer1;
-					b = (arr[1] / denom2) * numer2;
-					arr[0] = a+b;
-				}
-			}else if(denom1 == denom2) {
-				if((numer1+numer2) % denom1 == 0) {
-					arr[0] = (numer1+numer2) / denom1;
-					arr[1] = 1;
-				}else {
-					arr[0] = numer1+numer2;
-					arr[1] = denom1;
-				}
+		int[] arr = new int[2];
+        if(denom1 % numer1 == 0) {
+			denom1 = denom1 / numer1;
+			numer1 = 1;
+		}
+		if(denom2 % numer2 == 0) {
+			denom2 = denom2 / numer2;
+			numer2 = 1;
+		}
+        if(denom1 < denom2) {
+			if(denom2 % denom1 == 0) {
+				arr[1] = denom2;
+				arr[0] = (denom2 / denom1) * numer1 + numer2;
 			}else {
-				if(denom1 % denom2 == 0) {
-					arr[1] = denom1;
-					arr[0] = (denom1 / denom2) * numer2 + numer1;
-				}else {
-					arr[1] = (denom1 * denom2 / gcd(denom1, denom2));
-					int a = 0, b = 0;
-					a = (arr[1] / denom1) * numer1;
-					b = (arr[1] / denom2) * numer2;
-					arr[0] = a+b;
-				}
+				arr[1] = (denom1 * denom2 / gcd(denom1, denom2));
+				int a = 0, b = 0;
+				a = (arr[1] / denom1) * numer1;
+				b = (arr[1] / denom2) * numer2;
+				arr[0] = a+b;
 			}
-	        if(arr[1] % arr[0] == 0) {
-				arr[1] = arr[1] / arr[0];
-				arr[0] = 1;
-	        }
-	        return arr;
-	    }
+		}else if(denom1 == denom2) {
+			if((numer1+numer2) % denom1 == 0) {
+				arr[0] = (numer1+numer2) / denom1;
+				arr[1] = 1;
+			}else {
+				arr[0] = numer1+numer2;
+				arr[1] = denom1;
+			}
+		}else {
+			if(denom1 % denom2 == 0) {
+				arr[1] = denom1;
+				arr[0] = (denom1 / denom2) * numer2 + numer1;
+			}else {
+				arr[1] = (denom1 * denom2 / gcd(denom1, denom2));
+				int a = 0, b = 0;
+				a = (arr[1] / denom1) * numer1;
+				b = (arr[1] / denom2) * numer2;
+				arr[0] = a+b;
+			}
+		}
+        if(arr[1] % arr[0] == 0) {
+			arr[1] = arr[1] / arr[0];
+			arr[0] = 1;
+        }
+        return arr;
 	    
 	    public static int gcd(int a, int b) {
 			if (a % b == 0) {

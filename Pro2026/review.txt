@@ -41,6 +41,31 @@ StringBuilder을 사용하는게 용량을 축소 시킬 수 있음
 * 문자 반복 시
 StringBuilder append 또는 String repeat
 
+* StringBuilder
+계속 문자열을 누적하는 경우(+=)
+import 안필요함
+
+String으로 return하고 싶을 땐?
+StringBuilder sb = new StringBuilder();
+...
+return sb.toString(); 
+
+* 배열 복사
+Arrays.copyOfRange(원본배열, 시작 인덱스(포함), 끝 인덱스(미포함))
+
+*숫자 문자 → 숫자 값으로 바꾸는 공식
+int digit = s.charAt(i) - '0';
+
+* 약수의 특징
+1. 약수는 항상 쌍으로 나옴
+2. 약수 탐색은 √n까지만 보면 됨
+3. n이 제곱수면 “가운데 약수”가 하나만 있음
+4. 약수의 개수는 소인수분해로 구할 수 있음
+예: 소인수분해 n = p^a * q^b * r^c ... 이면 약수 개수 = (a+1)(b+1)(c+1)...
+
+
+
+
 
 < 오답노트 >
 
@@ -52,11 +77,19 @@ Basic ------------------------------------------
 - Q12
 - Q13
 - Q18
-_ Q21
-_ Q22
+- Q21
+- Q22
+- Q26
+- Q30
+
 
 : 실패 후 성공 문제
 - Q17
+- Q31
+
+
+: 재도전 필수
+- Q32
 
 
 

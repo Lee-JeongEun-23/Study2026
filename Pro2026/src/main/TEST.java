@@ -5,33 +5,33 @@ import java.util.Arrays;
 public class TEST {
 
 	public static void main(String[] args) {
-		String my_string = "hello";
-		int n = 3;
-	    String answer = "";
-	    
-	    for(int i = 0; i < my_string.length(); i++) {
-	    	answer += String.valueOf(my_string.charAt(i)).repeat(n) ;
+		int n = 100;
+	    int answer = 0;
+	    for(int i = 1; i <=n; i++) {
+	    	if(n%i == 0) {
+	    		answer ++;
+	    	}
 	    }
 	    System.out.println(answer);
-	    
+
+		
 	    
 	}
 
-	
 
 	
 }
 /*
-	문자열 my_string과 정수 n이 매개변수로 주어질 때, my_string에 들어있는 각 문자를 n만큼 반복한 문자열을 return 하도록 solution 함수를 완성해보세요.
+		순서쌍이란 두 개의 숫자를 순서를 정하여 짝지어 나타낸 쌍으로 (a, b)로 표기합니다.
+	자연수 n이 매개변수로 주어질 때 두 숫자의 곱이 n인 자연수 순서쌍의 개수를 return 하도록 solution 함수를 완성해주세요.
 	
 	
 	제한사항)
-	2 ≤ my_string 길이 ≤ 5
-	2 ≤ n ≤ 10
-	"my_string"은 영어 대소문자로 이루어져 있습니다.
+	1 ≤ n ≤ 1,000,000
 	
-	my_string	n	result
-"hello"	3	"hhheeellllllooo"
+	n	result
+20	6
+100	9
 
-	
+	(1, 20), (2, 10), (4, 5), (5, 4), (10, 2), (20, 1)
  */
